@@ -185,7 +185,7 @@ def main():
     # Group keys expiring exactly in 30 days by application.
     apps_with_exactly_30 = defaultdict(list)
     for key in expiring_within_30:
-        if key["Days Left"] == 3:
+        if key["Days Left"] == 30: 
             apps_with_exactly_30[key["App"]].append(key)
 
     # For each application group, send an email with a custom template.
